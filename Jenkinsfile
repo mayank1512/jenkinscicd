@@ -1,5 +1,6 @@
-def stack_name= "Mayank"
+def stack_name= "Testing"
 node {
+   stage ('checkout') { checkout scm}
    stage('stack_name') { 
    sh """
    ${JENKINS_HOME}/stacked_deployment/createenv.sh $stack_name
